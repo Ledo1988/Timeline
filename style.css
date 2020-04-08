@@ -1,0 +1,230 @@
+* {
+  box-sizing: border-box; }
+
+body {
+  font-family: 'Roboto', sans-serif; }
+
+.timeline {
+  font-size: 0;
+  line-height: 0;
+  width: 100%;
+  padding: 15px; }
+  .timeline--wrapper {
+    margin: 0 -15px; }
+  .timeline__item {
+    position: relative;
+    display: inline-block;
+    width: calc((100% - 10px)/3);
+    font-size: 0;
+    padding: 15px 0;
+    margin-bottom: 15px; }
+    .timeline__item--wrapper {
+      display: inline-block;
+      font-size: 0;
+      width: calc(100% - 10px - 10px);
+      margin: 0 5px; }
+      .timeline__item--wrapper::after {
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+        width: 100%;
+        height: 2px;
+        background-color: #E5E5E5;
+        box-sizing: border-box; }
+    .timeline__item::before {
+      content: '';
+      display: inline-block;
+      vertical-align: middle;
+      border-radius: 100%;
+      border: 2px solid #E5E5E5;
+      width: 10px;
+      height: 10px;
+      box-sizing: border-box; }
+    .timeline__item:first-of-type .timeline__item-title {
+      left: 0;
+      text-align: left; }
+    .timeline__item:nth-of-type(3n + 1) .timeline__item-title {
+      left: 0;
+      text-align: left; }
+    .timeline__item:last-of-type {
+      width: auto; }
+      .timeline__item:last-of-type .timeline__item--wrapper {
+        width: auto;
+        margin: 0; }
+      .timeline__item:last-of-type:nth-of-type(3n + 1) .timeline__item-title {
+        display: block;
+        width: auto;
+        right: 0;
+        left: auto; }
+      .timeline__item:last-of-type .timeline__item--wrapper::after {
+        display: none; }
+    .timeline__item.progress::before {
+      border-color: #F49530;
+      background-color: #F49530; }
+    .timeline__item.done::before {
+      border-color: #4EA31E;
+      background-color: #4EA31E; }
+    .timeline__item.done .timeline__item--wrapper::after {
+      background-color: #4EA31E; }
+  .timeline__item-title {
+    position: absolute;
+    top: 0;
+    left: -50%;
+    color: #B094A2;
+    font-size: 14px;
+    white-space: nowrap;
+    width: 100%;
+    text-align: center; }
+  .timeline.bottom .timeline__item-title {
+    top: auto;
+    bottom: 0; }
+  .timeline.quarter .timeline__item {
+    width: calc((100% - 10px)/4); }
+    .timeline.quarter .timeline__item .timeline__item-title {
+      left: 0;
+      text-align: center; }
+    .timeline.quarter .timeline__item:nth-of-type(3n + 1) .timeline__item-title {
+      left: 0;
+      text-align: center; }
+    .timeline.quarter .timeline__item:nth-of-type(4n + 1) .timeline__item-title {
+      left: 0;
+      text-align: center; }
+    .timeline.quarter .timeline__item:last-of-type {
+      width: calc((100% + 30px)/4); }
+      .timeline.quarter .timeline__item:last-of-type:nth-of-type(4n) {
+        width: calc((100% - 20px)/4); }
+      .timeline.quarter .timeline__item:last-of-type .timeline__item--wrapper {
+        width: calc(100% - 10px - 20px);
+        margin: 0 5px; }
+      .timeline.quarter .timeline__item:last-of-type .timeline__item--wrapper::after {
+        display: inline-block; }
+      .timeline.quarter .timeline__item:last-of-type:after {
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+        border-radius: 100%;
+        border: 2px solid #E5E5E5;
+        width: 10px;
+        height: 10px;
+        box-sizing: border-box; }
+    .timeline.quarter .timeline__item.progress::before {
+      border-color: #F49530;
+      background-color: #F49530; }
+    .timeline.quarter .timeline__item.progress .timeline__item--wrapper::after {
+      background-color: #F49530; }
+
+.timeline-control {
+  margin: 20px 0;
+  display: flex; }
+  .timeline-control__item {
+    flex-shrink: 0;
+    margin-right: 60px; }
+  .timeline-control__title {
+    font-size: 20px;
+    margin-bottom: 15px; }
+  .timeline-control__checkbox {
+    margin-right: 30px; }
+  .timeline-control__checkboxes--wrapper {
+    display: flex; }
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; }
+  .checkbox__input {
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    pointer-events: none; }
+    .checkbox__input:checked ~ label::before {
+      border-color: #000000; }
+    .checkbox__input:checked ~ label::after {
+      opacity: 1; }
+    .checkbox__input:checked:hover ~ label::before {
+      border-color: #000000; }
+    .checkbox__input:hover ~ label::before {
+      border-color: rgba(0, 0, 0, 0.5); }
+  .checkbox__label {
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 14px;
+    color: #000000; }
+    .checkbox__label:before {
+      content: '';
+      width: 20px;
+      height: 20px;
+      box-sizing: border-box;
+      border: 1px solid #E5E5E5;
+      margin-right: 8px;
+      background: #ffffff;
+      transition: .2s ease-in-out;
+      flex-shrink: 0; }
+    .checkbox__label::after {
+      content: '';
+      position: absolute;
+      left: 7px;
+      top: 4px;
+      width: 5px;
+      height: 8px;
+      border: solid #000000;
+      border-width: 0 1px 1px 0;
+      transform: rotate(45deg);
+      transition: .2s ease-in-out;
+      opacity: 0; }
+
+.number {
+  display: flex;
+  align-items: center; }
+  .number__minus, .number__plus {
+    width: 20px;
+    height: 20px;
+    background: #f2f2f2;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    cursor: pointer; }
+  .number__input {
+    width: 70px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 10px;
+    padding: 5px; }
+
+legend {
+  padding: 0; }
+
+fieldset {
+  border: 0;
+  padding: 0.01em 0 0 0;
+  margin: 0;
+  min-width: 0; }
+
+body:not(:-moz-handler-blocked) fieldset {
+  display: table-cell; }
+
+.noselect {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+               supported by Chrome, Opera and Firefox */ }
+
+/*# sourceMappingURL=style.css.map */

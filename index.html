@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Timeline</title>
+    <meta name="theme-color" content="#fff">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <main>
+      <section class="timeline-content">
+        <form class="timeline-control" method="POST" action="">
+          <div class="timeline-control__item timeline-control__item-checboxes">
+            <fieldset class="timeline-control__checkboxes">
+              <legend class="timeline-control__title">Timeline style</legend>
+              <div class="timeline-control__checkboxes--wrapper">
+                <div class="timeline-control__checkbox checkbox">
+                  <input class="checkbox__input timeline-control__checkbox-input" id="style_bottom" type="checkbox" name="timeline_style" value="bottom">
+                  <label class="checkbox__label timeline-control__checkbox-label" for="style_bottom"><span class="checkbox__title timeline-control__checkbox-title">Bottom</span></label>
+                </div>
+                <div class="timeline-control__checkbox checkbox">
+                  <input class="checkbox__input timeline-control__checkbox-input" id="style_quarter" type="checkbox" name="timeline_style" value="quarter">
+                  <label class="checkbox__label timeline-control__checkbox-label" for="style_quarter"><span class="checkbox__title timeline-control__checkbox-title">Quarter</span></label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+          <div class="timeline-control__item timeline-control__item-number">
+            <div class="timeline-control__title">Steps amount</div>
+            <div class="timeline-control__number number noselect"><span class="number__minus">-</span>
+              <input class="number__input" type="text" value="1"><span class="number__plus">+</span>
+            </div>
+          </div>
+        </form>
+        <div class="timeline">
+          <div class="timeline--wrapper">
+            <div class="timeline__item done">
+              <div class="timeline__item--wrapper">
+                <div class="timeline__item-title">Step 1</div>
+              </div>
+            </div>
+            <div class="timeline__item done">
+              <div class="timeline__item--wrapper">
+                <div class="timeline__item-title">Step 2</div>
+              </div>
+            </div>
+            <div class="timeline__item progress">
+              <div class="timeline__item--wrapper">
+                <div class="timeline__item-title">Step 3</div>
+              </div>
+            </div>
+            <div class="timeline__item">
+              <div class="timeline__item--wrapper">
+                <div class="timeline__item-title">Step 4 Step 4</div>
+              </div>
+            </div>
+            <div class="timeline__item">
+              <div class="timeline__item--wrapper">
+                <div class="timeline__item-title">Step 5 Step 5 Step5</div>
+              </div>
+            </div>
+            <div class="timeline__item">
+              <div class="timeline__item--wrapper">
+                <div class="timeline__item-title">Step 6666666</div>
+              </div>
+            </div>
+            <div class="timeline__item">
+              <div class="timeline__item--wrapper">
+                <div class="timeline__item-title">Step 77777777777777777</div>
+              </div>
+            </div>
+            <div class="timeline__item">
+              <div class="timeline__item--wrapper">
+                <div class="timeline__item-title">Step 8</div>
+              </div>
+            </div>
+            <div class="timeline__item">
+              <div class="timeline__item--wrapper">
+                <div class="timeline__item-title">Step 9</div>
+              </div>
+            </div>
+            <div class="timeline__item">
+              <div class="timeline__item--wrapper">
+                <div class="timeline__item-title">Step 100000000000000000000</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <script src="script.js"></script>
+    </footer>
+  </body>
+</html>

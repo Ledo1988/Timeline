@@ -1,0 +1,69 @@
+doctype html
+html(lang='ru')
+	head
+		meta(charset='utf-8')
+		meta(http-equiv='X-UA-Compatible' content='IE=edge')
+		title Timeline
+		meta(name='theme-color' content='#fff')
+		meta(name='apple-mobile-web-app-status-bar-style' content='black-translucent')
+		meta(name='viewport' content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
+		link(href='https://fonts.googleapis.com/css2?family=Roboto&display=swap' rel='stylesheet')
+		link(rel='stylesheet' href='style.css')
+		script(src='https://code.jquery.com/jquery-3.4.1.min.js' integrity='sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=' crossorigin='anonymous')
+	body
+		main
+			section.timeline-content
+				form.timeline-control(method='POST' action='')
+					.timeline-control__item.timeline-control__item-checboxes
+						fieldset.timeline-control__checkboxes
+							legend.timeline-control__title Timeline style
+							.timeline-control__checkboxes--wrapper
+								.timeline-control__checkbox.checkbox
+									input(id='style_bottom' class='checkbox__input timeline-control__checkbox-input' type='checkbox' name='timeline_style' value='bottom')
+									label(for='style_bottom' class='checkbox__label timeline-control__checkbox-label')
+										span(class='checkbox__title timeline-control__checkbox-title') Bottom
+								.timeline-control__checkbox.checkbox
+									input(id='style_quarter' class='checkbox__input timeline-control__checkbox-input' type='checkbox' name='timeline_style' value='quarter')
+									label(for='style_quarter' class='checkbox__label timeline-control__checkbox-label')
+										span(class='checkbox__title timeline-control__checkbox-title') Quarter
+					.timeline-control__item.timeline-control__item-number
+						.timeline-control__title Steps amount
+						.timeline-control__number.number.noselect
+							span.number__minus -
+							input(class='number__input' type='text' value='1')
+							span.number__plus +
+				.timeline
+					.timeline--wrapper
+						.timeline__item.done
+							.timeline__item--wrapper
+								.timeline__item-title Step 1
+						.timeline__item.done
+							.timeline__item--wrapper
+								.timeline__item-title Step 2
+						.timeline__item.progress
+							.timeline__item--wrapper
+								.timeline__item-title Step 3
+						.timeline__item
+							.timeline__item--wrapper
+								.timeline__item-title Step 4 Step 4
+						.timeline__item
+							.timeline__item--wrapper
+								.timeline__item-title Step 5 Step 5 Step5
+						.timeline__item
+							.timeline__item--wrapper
+								.timeline__item-title Step 6666666
+						.timeline__item
+							.timeline__item--wrapper
+								.timeline__item-title Step 77777777777777777
+						.timeline__item
+							.timeline__item--wrapper
+								.timeline__item-title Step 8
+						.timeline__item
+							.timeline__item--wrapper
+								.timeline__item-title Step 9
+						.timeline__item
+							.timeline__item--wrapper
+								.timeline__item-title Step 100000000000000000000
+		footer
+			script(src='script.js')
+
