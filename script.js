@@ -18,7 +18,7 @@ $(document).ready(function() {
 		};
 	}(jQuery));
 
-	$('body .number__input').val($('body .timeline').find('.timeline__item').length);
+	$('body .number__input').val($('body .timeline-content').find('.timeline__item').length);
 
 	$('body .number__input').inputFilter(function(value) {
 		return /^\d*$/.test(value); });
@@ -57,14 +57,14 @@ $(document).ready(function() {
 			stepNumber = currentNumber - newNumber;
 
 			for (var i = 1; i <= stepNumber; i++) {
-				$('body .timeline').find('.timeline__item').last().remove();
+				$('body .timeline-content').find('.timeline__item').last().remove();
 			}
 		} else if (currentNumber < newNumber) {
 			stepNumber = newNumber - currentNumber;
 
 			for (var i = 1; i <= stepNumber; i++) {
 				$('<div class="timeline__item"><div class="timeline__item--wrapper"><div class="timeline__item-title">New Step</div></div></div>')
-					.insertAfter($('.timeline__item').last());
+					.insertAfter($('body .timeline-content').find('.timeline__item').last());
 			}
 		} else {
 			return false;
